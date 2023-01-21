@@ -22,6 +22,7 @@ namespace BE_CRUDMascotas.Controllers
         {
             try
             {
+                //Thread.Sleep(2000);
                 var listMascotas = await _context.Mascotas.ToListAsync();
                 return Ok(listMascotas);
             }
