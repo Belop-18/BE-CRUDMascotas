@@ -1,3 +1,4 @@
+using AutoMapper;
 using BE_CRUDMascotas.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,9 @@ builder.Services.AddDbContext<AplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Conexion"));
 });
+
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
